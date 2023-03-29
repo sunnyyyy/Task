@@ -1,0 +1,132 @@
+{
+	"results": {
+		"raceStatus": "completed",
+		"gender": "male",
+		"racename": "2023 Bexford Marathon",
+		"tod": "2023-03-28T12:00:00Z",
+		"lastupdated": "2023-03-28T14:30:00Z",
+		"racelength": 26.2,
+		"athletes": [
+			{
+				"rank": 1,
+				"firstname": "Samuel",
+				"surname": "White",
+				"athleteid": "sw007",
+				"finishtime": "2:10:30",
+				"raceprogress": "completed",
+				"teamname": "Team USA",
+				"bibnumber": "012",
+				"flag": "USA",
+				"countryname": "United States"
+			},
+			{
+				"rank": 2,
+				"firstname": "Michael",
+				"surname": "Smith",
+				"athleteid": "ms001",
+				"finishtime": "2:12:45",
+				"raceprogress": "completed",
+				"teamname": "Team Canada",
+				"bibnumber": "014",
+				"flag": "CAN",
+				"countryname": "Canada"
+			},
+			{
+				"rank": 3,
+				"firstname": "Juan",
+				"surname": "Garcia",
+				"athleteid": "jg001",
+				"finishtime": "2:14:15",
+				"raceprogress": "completed",
+				"teamname": "Team Mexico",
+				"bibnumber": "131",
+				"flag": "MEX",
+				"countryname": "Mexico"
+			},
+			{
+				"rank": 4,
+				"firstname": "Matthew",
+				"surname": "Johnson",
+				"athleteid": "mj001",
+				"finishtime": "2:16:20",
+				"raceprogress": "completed",
+				"teamname": "Team South Africa",
+				"bibnumber": "001",
+				"flag": "RSA",
+				"countryname": "South Africa"
+			},
+			{
+				"rank": 5,
+				"firstname": "James",
+				"surname": "Brown",
+				"athleteid": "jb0",
+				"finishtime": "2:17:30",
+				"raceprogress": "completed",
+				"teamname": "Team Australia",
+				"bibnumber": "005",
+				"flag": "AUS",
+				"countryname": "Australia"
+			},
+			{
+				"rank": 6,
+				"firstname": "Robert",
+				"surname": "Williams",
+				"athleteid": "rw003",
+				"finishtime": "2:18:15",
+				"raceprogress": "completed",
+				"teamname": "Team Canada",
+				"bibnumber": "045",
+				"flag": "CAN",
+				"countryname": "Canada"
+			},
+			{
+				"rank": 7,
+				"firstname": "Woo-Jin",
+				"surname": "Lee",
+				"athleteid": "kc001",
+				"finishtime": "2:20:00",
+				"raceprogress": "completed",
+				"teamname": "Team South Korea",
+				"bibnumber": "017",
+				"flag": "KOR",
+				"countryname": "South Korea"
+			},
+			{
+				"rank": 8,
+				"firstname": "Maria",
+				"surname": "Hernandez",
+				"athleteid": "mh001",
+				"finishtime": "2:21:30",
+				"raceprogress": "completed",
+				"teamname": "Team Spain",
+				"bibnumber": "063",
+				"flag": "ESP",
+				"countryname": "Spain"
+			},
+			{
+				"rank": 9,
+				"firstname": "Hiroshi",
+				"surname": "Nakamura",
+				"athleteid": "hn001",
+				"finishtime": "2:22:15",
+				"raceprogress": "completed",
+				"teamname": "Team Japan",
+				"bibnumber": "042",
+				"flag": "JPN",
+				"countryname": "Japan"
+			},
+			{
+				"rank": 10,
+				"firstname": "Oliver",
+				"surname": "Martinez",
+				"athleteid": "om001",
+				"finishtime": "2:23:00",
+				"raceprogress": "completed",
+				"teamname": "Team Mexico",
+				"bibnumber": "031",
+				"flag": "MEX",
+				"countryname": "Mexico"
+			}
+		]
+	}
+}
