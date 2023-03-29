@@ -1,5 +1,6 @@
 import './App.css';
 import data from './MarathonResults.json';
+
 import {
   Box,
   Table,
@@ -11,17 +12,62 @@ import {
   TableSortLabel,
   Paper,
   Toolbar,
+  
 } from '@mui/material';
 import { visuallyHidden } from '@mui/utils'
 import React, { useEffect, useState } from "react";
 
+
+
 function App() {
+  
   const posts = data.results.athletes;
   const description = data.results;
   const [rowData, setRowData] = useState(posts);
   const [orderDirection1, setOrderDirection1] = useState("desc");
   const [orderDirection2, setOrderDirection2] = useState("desc");
 
+  const downloadFile = ({ data, fileName, fileType }) => {
+    const blob = new Blob([data], { type: fileType })
+  
+    const a = document.createElement('a')
+    a.download = fileName
+    a.href = window.URL.createObjectURL(blob)
+    const clickEvt = new MouseEvent('click', {
+      view: window,
+      bubbles: true,
+      cancelable: true,
+    })
+    a.dispatchEvent(clickEvt)
+    a.remove()
+  }
+  const exportToCsv = e => {
+    e.preventDefault();
+  
+    // Headers for each column
+    let headers = ['Rank','Full Name','Finish Time','Country Code'];
+    let usersCsv = 'Rank, Full Name, Finish Time, Country \n';
+    // Convert users data to a csv
+
+    posts.forEach(item => { 
+      usersCsv += `${item.rank}, ${item.firstname} ${item.surname}, ${item.finishtime}, ${item.countryname}\n`
+    })
+
+    // for (let i = 0; i < posts.length; i++) { 
+    //   usersCsv +== `${posts}`
+    // }
+
+    // for(var i in posts)
+    //   usersCsv.push([posts[i].rank, posts[i].firstname, posts[i].surname, posts[i].finishtime,posts[i].countryname].join(','));
+
+  
+    downloadFile({
+      data: usersCsv,
+      fileName: 'race_results.csv',
+      fileType: 'text/csv',
+    })
+  }
+  
   const sortArray = (arr, orderBy) => {
     switch (orderBy) {
       case "asc":
@@ -70,14 +116,16 @@ function App() {
         <p>Gender: {data.results.gender} </p>
         <p>Race Lenength: {data.results.racelength} </p>
         <p>Tod:{data.results.tod} </p>
-        <p>Last updated:{data.results.lastupdated} </p>
-
+        <p class='pb-4'>Last updated:{data.results.lastupdated} </p>
+        <button class="rounded-full text-gray-900 bg-font-yellow py-2.5 px-5 mr-2 mb-2 text-sm font-medium hover:bg-gray-100 hover:text-blue-700 focus:z-10" onClick={exportToCsv}>
+          Export to CSV
+        </button>
         </div>
         <div className='posts' class='p-8'>
         <TableContainer component={Paper}>
-     <Table aria-label="simple table">
+     <Table aria-label="simple table" >
        <TableHead>
-         <TableRow>
+         <TableRow >
            <TableCell onClick={handleSortRequest1}>
            <TableSortLabel active={true} direction={orderDirection1}>
             Rank
@@ -119,7 +167,8 @@ function App() {
          ))}
        </TableBody>
      </Table>
-   </TableContainer>        
+   </TableContainer>
+ 
         </div>
 
       </div>
