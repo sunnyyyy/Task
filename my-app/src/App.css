@@ -49,3 +49,9 @@
     transform: rotate(360deg);
   }
 }
+.usersTable th,
+.usersTable td {
+  padding: 0.4rem 0.6rem;
+  text-align: left;
+}
+
