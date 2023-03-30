@@ -2,7 +2,6 @@ import './App.css';
 import data from './MarathonResults.json';
 
 import {
-  Box,
   Table,
   TableRow,
   TableCell,
@@ -11,10 +10,8 @@ import {
   TableBody,
   TableSortLabel,
   Paper,
-  Toolbar,
   
 } from '@mui/material';
-import { visuallyHidden } from '@mui/utils'
 import React, { useEffect, useState } from "react";
 
 
@@ -45,7 +42,6 @@ function App() {
     e.preventDefault();
   
     // Headers for each column
-    let headers = ['Rank','Full Name','Finish Time','Country Code'];
     let usersCsv = 'Rank, Full Name, Finish Time, Country \n';
     // Convert users data to a csv
 
